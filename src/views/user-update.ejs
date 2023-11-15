@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>List User</title>
+</head>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+
+<body>
+
+  <div class="login_container" style="margin-top: 10px;
+  ">
+    <form style="margin-left: 22px; margin-right: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+              rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+              rgba(0, 0, 0, 0.1 ) 0px -79px 40px 0px inset,
+              rgba(0, 0, 0, 0.06) 0px 2px 1px,
+              rgba(0, 0, 0, 0.09) 0px 4px 2px,
+              rgba(0, 0, 0, 0.09) 0px 8px 4px,
+              rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+              rgba(0, 0, 0, 0.09) 0px 32px 16px;
+   border-radius: 5px;" method="post" action="/user/update-user">
+      <div class="row" style="
+      border-radius: 5px; 
+      margin-left: 1px;
+      border: 0.5px solid;
+      padding: 10px;
+      width: 100%;
+      ">
+        <div className="p-4">
+          <h3 style="margin-left: 60px;
+           margin-bottom: -40px;
+           ">Update user
+          </h3>
+        </div>
+        <input type="hidden" value="<%=userdata.id%>" name="id">
+        <div class="col-12  ml-5 p-3 "><br><br>
+          <label for="email" class="form-lable" style="font-weight: bold;">Email</label>
+          <input value="<%=userdata.email%>" type="email" class="form-control col-7" id="email" name="email"
+            placeholder="Email" aria-describedby="emailHelp" required />
+        </div>
+
+        <div class="col-12 ml-5 m-3" style="font-weight: bold;">
+          <label for="username" class="form-lable">UserName</label>
+          <input value="<%=userdata.username%>" type="text" class="form-control col-7" id="username" name="username"
+            placeholder="Username" required />
+        </div>
+        <div class="sub mt-3 ml-5">
+          <button class="btn btn-primary" type="submit" style="width: 400px; margin-left: 16px;
+           font-weight: bold;" onclick="confirm('Create Data Successfull') ">
+            Update
+          </button>
+        </div>
+
+      </div>
+    </form>
+
+  </div>
+
+</body>
+
+</html>
